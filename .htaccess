@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# API Laravel: /api/... → backend/public/index.php
+RewriteRule ^api(/.*)?$ backend/public/index.php [L,QSA]
+# Backoffice: /admin → pagina di login admin
+RewriteRule ^admin/?$ /frontend/dist/admin-login.html [L,R=302]

@@ -1,0 +1,22 @@
+# ── Backend ────────────────────────────────
+backend/.env
+backend/.env.*
+!backend/.env.example
+backend/vendor/
+backend/storage/logs/*.log
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/bootstrap/cache/*.php
+
+# ── Frontend ───────────────────────────────
+frontend/node_modules/
+frontend-node/
+
+# ── OS / Editor ────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.user

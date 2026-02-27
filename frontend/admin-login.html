@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Accesso — Backoffice PPR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/apple.css" />
+  </head>
+  <body class="admin admin-login-page">
+    <main class="admin-login-main">
+      <div class="admin-login-card">
+        <h1 class="admin-login-title">Backoffice</h1>
+        <p class="admin-login-lead">Accedi con email e password.</p>
+        <form id="login-form" class="admin-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" class="input" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" class="input" required autocomplete="current-password" />
+          </div>
+          <p class="form-feedback" id="login-feedback" style="display:none;"></p>
+          <button type="submit" class="btn btn-primary btn-block">Accedi</button>
+        </form>
+        <p class="admin-login-footer">
+          Non hai un account? <a href="./admin-register.html">Registrati</a>
+        </p>
+      </div>
+    </main>
+    <script type="module" src="/src/admin-login.js"></script>
+  </body>
+</html>

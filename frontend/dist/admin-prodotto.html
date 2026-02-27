@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prodotto — Backoffice PPR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="/frontend/dist/assets/admin-prodotto-Bux2hmPD.js"></script>
+    <link rel="modulepreload" crossorigin href="/frontend/dist/assets/api-BXrcMaAh.js">
+    <link rel="modulepreload" crossorigin href="/frontend/dist/assets/admin-auth-Cq3QAKBC.js">
+    <link rel="stylesheet" crossorigin href="/frontend/dist/assets/api-Dnvb9gYq.css">
+    <link rel="stylesheet" crossorigin href="/frontend/dist/assets/admin-prodotto-CfZ7kyuK.css">
+  </head>
+  <body class="admin">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <a href="./admin.html" class="admin-logo">Backoffice</a>
+        <nav class="admin-nav">
+          <a href="./admin.html">Dashboard</a>
+          <a href="./admin-prodotti.html" class="active">Prodotti</a>
+          <a href="./admin-pagine.html">Pagine</a>
+          <a href="./admin-contatti.html">Contatti</a>
+          <a href="./admin-statistiche.html">Statistiche</a>
+          <a href="./admin-impostazioni.html">Impostazioni</a>
+          <a href="#" id="logout-btn">Esci</a>
+        </nav>
+      </div>
+    </header>
+    <main class="admin-main">
+      <div class="admin-content">
+        <h1 class="admin-title" id="page-title">Nuovo prodotto</h1>
+        <p class="admin-lead" id="page-lead">Compila i campi e salva.</p>
+        <form id="product-form" class="admin-form">
+          <input type="hidden" name="id" id="product-id" />
+          <div class="form-row">
+            <div class="form-group flex-2">
+              <label for="name">Nome *</label>
+              <input id="name" name="name" class="input" required />
+            </div>
+            <div class="form-group flex-1">
+              <label for="slug">Slug (URL)</label>
+              <input id="slug" name="slug" class="input" placeholder="auto da nome" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="short_description">Descrizione breve</label>
+            <input id="short_description" name="short_description" class="input" />
+          </div>
+          <div class="form-group">
+            <label>Descrizione</label>
+            <div id="description-editor" style="min-height:180px;"></div>
+            <input type="hidden" id="description" name="description" />
+          </div>
+          <div class="form-group">
+            <label for="price">Prezzo</label>
+            <input id="price" name="price" type="number" step="0.01" min="0" class="input" placeholder="0.00" />
+          </div>
+          <div class="form-group">
+            <label for="video_url">URL video (YouTube / Vimeo)</label>
+            <input id="video_url" name="video_url" class="input" placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label for="category_id">Categoria</label>
+            <div style="display:flex;gap:8px;align-items:center;">
+              <select id="category_id" name="category_id" class="input" style="flex:1;">
+                <option value="">— Nessuna —</option>
+              </select>
+              <button type="button" class="btn btn-secondary" id="new-category-btn" style="white-space:nowrap;">+ Nuova</button>
+            </div>
+            <div id="new-category-form" style="display:none;margin-top:8px;display:none;">
+              <input id="new-category-name" class="input" placeholder="Nome categoria" style="margin-bottom:6px;" />
+              <div style="display:flex;gap:6px;">
+                <button type="button" class="btn btn-primary btn-small" id="new-category-save">Crea</button>
+                <button type="button" class="btn btn-secondary btn-small" id="new-category-cancel">Annulla</button>
+              </div>
+              <p id="new-category-feedback" style="font-size:0.85em;margin-top:4px;display:none;"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="label">Etichetta (testo libero)</label>
+            <input id="label" name="label" class="input" placeholder="es. Nuovo" />
+          </div>
+          <div class="form-group form-inline">
+            <label><input type="checkbox" name="is_active" id="is_active" checked /> Visibile in vetrina</label>
+          </div>
+          <div class="form-group form-inline">
+            <label><input type="checkbox" name="is_featured" id="is_featured" /> In evidenza (homepage)</label>
+          </div>
+          <input type="hidden" id="sort_order" name="sort_order" value="0" />
+          <hr class="form-hr" />
+          <h3 class="form-section-title">Tag</h3>
+          <div id="product-tags-wrap" class="form-group"></div>
+          <hr class="form-hr" />
+          <h3 class="form-section-title">Caratteristiche (elenco puntato)</h3>
+          <div id="attributes-list"></div>
+          <button type="button" class="btn btn-secondary" id="add-attribute">+ Aggiungi riga</button>
+          <hr class="form-hr" />
+          <h3 class="form-section-title">Immagini</h3>
+          <div id="media-list"></div>
+          <div class="form-group">
+            <label>Carica immagine</label>
+            <input type="file" id="media-upload" accept="image/*" />
+            <p class="form-hint" id="media-upload-hint">Salva il prodotto prima di caricare immagini.</p>
+          </div>
+          <input type="hidden" id="meta_title" name="meta_title" />
+          <input type="hidden" id="meta_description" name="meta_description" />
+          <p class="form-feedback" id="form-feedback" style="display:none;"></p>
+          <button type="submit" class="btn btn-primary">Salva prodotto</button>
+          <a href="./admin-prodotti.html" class="btn btn-secondary" style="margin-left:8px;">Annulla</a>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

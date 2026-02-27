@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it" class="storefront">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prodotto — PPR Skintemple</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/apple.css" />
+  </head>
+  <body class="storefront">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="./" class="logo">PPR Skintemple</a>
+        <nav class="nav">
+          <a href="./">Home</a>
+          <a href="./prodotti.html">Prodotti</a>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section product-detail">
+        <div class="container">
+          <a href="./prodotti.html" class="back-link">← Prodotti</a>
+          <div class="product-detail-grid" id="product-detail">
+            <!-- Popolato da prodotto.js -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-text" id="footer-text">
+          © <span id="year"></span> PPR Skintemple
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="/src/prodotto.js"></script>
+  </body>
+</html>
+

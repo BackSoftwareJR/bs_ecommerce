@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prodotti — Backoffice PPR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/apple.css" />
+  </head>
+  <body class="admin">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <a href="./admin.html" class="admin-logo">Backoffice</a>
+        <nav class="admin-nav">
+          <a href="./admin.html">Dashboard</a>
+          <a href="./admin-prodotti.html" class="active">Prodotti</a>
+          <a href="./admin-pagine.html">Pagine</a>
+          <a href="./admin-contatti.html">Contatti</a>
+          <a href="./admin-statistiche.html">Statistiche</a>
+          <a href="./admin-impostazioni.html">Impostazioni</a>
+          <a href="#" id="logout-btn">Esci</a>
+        </nav>
+      </div>
+    </header>
+    <main class="admin-main">
+      <div class="admin-content">
+        <h1 class="admin-title">Prodotti</h1>
+        <p class="admin-lead">Gestisci i prodotti della vetrina.</p>
+        <p><a href="./admin-prodotto.html" class="btn btn-primary">Nuovo prodotto</a></p>
+        <div id="products-table-wrap"></div>
+      </div>
+    </main>
+    <script type="module" src="/src/admin-prodotti.js"></script>
+  </body>
+</html>
