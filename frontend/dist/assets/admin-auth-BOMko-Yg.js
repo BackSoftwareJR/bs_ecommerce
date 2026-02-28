@@ -1,0 +1,1 @@
+import{z as o}from"./api-SBpX3dnG.js";const t="admin-login.html";async function i(){try{const n=await o();if(n&&["admin","editor"].includes(n.role))return n}catch{}return window.location.href=t+(window.location.search?"?next="+encodeURIComponent(window.location.pathname+window.location.search):""),null}export{i as e};
