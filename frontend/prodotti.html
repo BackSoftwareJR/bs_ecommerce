@@ -46,6 +46,27 @@
 
             <!-- ── Contenuto prodotti ── -->
             <div class="catalog-content">
+
+              <!-- Barra di ricerca istantanea -->
+              <div class="catalog-search-wrap" id="catalog-search-wrap">
+                <div class="catalog-search-box">
+                  <svg class="catalog-search-ico" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                  <input
+                    type="search"
+                    id="catalog-search"
+                    class="catalog-search-input"
+                    placeholder="Cerca prodotto, categoria, ingrediente..."
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <button class="catalog-search-clear" id="catalog-search-clear" aria-label="Cancella ricerca" tabindex="-1">
+                    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </button>
+                </div>
+              </div>
+
               <div class="catalog-toolbar">
                 <h1 class="catalog-heading" id="catalog-title">Tutti i prodotti</h1>
                 <span class="catalog-count" id="catalog-count"></span>
