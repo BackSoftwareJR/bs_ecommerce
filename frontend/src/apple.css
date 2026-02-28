@@ -8,9 +8,9 @@
   --color-text-secondary: #666666;
   --color-border: #d2d2d7;
   --color-border-light: #e8e8ed;
-  --color-primary: #cf0a2c;
-  --color-primary-hover: #a80823;
-  --color-accent: #cf0a2c;
+  --color-primary: #1a9696;
+  --color-primary-hover: #127373;
+  --color-accent: #1a9696;
   --color-success: #34c759;
   --color-muted: #86868b;
   --radius: 12px;
@@ -423,7 +423,7 @@ img {
   border-radius: 980px;
   font-size: 11px;
   font-weight: 500;
-  background: rgba(0, 113, 227, 0.9);
+  background: rgba(26, 150, 150, 0.9);
   color: #fff;
 }
 .product-card-label {
@@ -477,6 +477,301 @@ img {
   text-align: center;
   margin-top: 36px;
 }
+
+/* ════════════════════════════════════════════════
+   HOMEPAGE — Layout stile Huawei
+   ════════════════════════════════════════════════ */
+
+/* ── Divisore hw ── */
+.hw-divider {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 0;
+}
+
+/* ── 1. HERO: titolo centrato + immagine fullbleed ── */
+.hw-hero {
+  padding: 80px 0 0;
+  text-align: center;
+  background: #fff;
+}
+
+.hw-hero-text {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 22px 64px;
+}
+
+.hw-hero-title {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  color: #1a1a1a;
+  margin: 0 0 28px;
+}
+
+.hw-hero-title em {
+  font-style: italic;
+  background: linear-gradient(120deg, #1abfbf 0%, #7b52c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hw-hero-quote {
+  font-size: 16px;
+  color: #888;
+  line-height: 1.65;
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 560px;
+}
+
+/* Immagine hero fullbleed (placeholder gradient finché non si carica un'immagine reale) */
+.hw-hero-image {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 7;
+  background: linear-gradient(135deg, #0a1a1a 0%, #0d2b2b 25%, #0f3d3d 55%, #1a4a5a 80%, #2a3a6b 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hw-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── 2. INTRO + STATS (testo sx, numeri grandi dx) ── */
+.hw-intro {
+  padding: 88px 0 80px;
+  background: #fff;
+}
+
+.hw-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hw-intro-text p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  margin: 0;
+}
+
+.hw-intro-stats {
+  display: flex;
+  gap: 56px;
+  align-items: flex-end;
+}
+
+.hw-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hw-stat-label {
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.hw-stat-number {
+  font-size: 68px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 6px 0 4px;
+}
+
+.hw-stat-number sup {
+  font-size: 32px;
+  font-weight: 700;
+  vertical-align: super;
+  letter-spacing: 0;
+}
+
+.hw-stat-sub {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ── 3. TITOLO COLORATO (stile "Convenienza a tutto tondo") ── */
+.hw-colored-title-section {
+  padding: 88px 0 0;
+  background: #fff;
+}
+
+.hw-colored-title {
+  font-size: 44px;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(120deg, #1abfbf 0%, #7b52c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* ── 4. FEATURES + IMMAGINE (lista sx, foto dx) ── */
+.hw-features {
+  padding: 64px 0 96px;
+  background: #fff;
+}
+
+.hw-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hw-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hw-feature h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.hw-feature p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.68;
+  margin: 0;
+}
+
+/* Immagine sezione valori (placeholder gradient finché non si carica un'immagine reale) */
+.hw-features-image {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(145deg, #e8f5f5 0%, #d0ecec 40%, #c4e0e8 100%);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hw-features-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── 5. I NOSTRI PRODOTTI ── */
+.hw-products {
+  padding: 88px 0 96px;
+  background: #f7f7f7;
+}
+
+.hw-section-title {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 52px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.hw-products-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.btn-hw-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 36px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 2px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: background 0.2s;
+}
+
+.btn-hw-primary:hover {
+  background: var(--color-primary-hover);
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ── Responsive homepage Huawei ── */
+@media (max-width: 900px) {
+  .hw-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hw-features-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hw-features-image {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 640px) {
+  .hw-hero-title {
+    font-size: 34px;
+  }
+
+  .hw-colored-title {
+    font-size: 28px;
+  }
+
+  .hw-stat-number {
+    font-size: 52px;
+  }
+
+  .hw-stat-number sup {
+    font-size: 24px;
+  }
+
+  .hw-intro-stats {
+    gap: 36px;
+  }
+
+  .hw-section-title {
+    font-size: 28px;
+  }
+
+  .hw-colored-title-section {
+    padding: 60px 0 0;
+  }
+
+  .hw-features {
+    padding: 48px 0 64px;
+  }
+
+  .hw-products {
+    padding: 60px 0 72px;
+  }
+}
+
+/* ── Fine sezioni Huawei ── */
 
 .site-footer {
   padding: 24px 0;
@@ -536,7 +831,7 @@ body.admin {
 .admin-nav a.active {
   color: var(--color-primary);
   font-weight: 500;
-  background: rgba(0, 113, 227, 0.08);
+  background: rgba(26, 150, 150, 0.08);
 }
 
 .admin-main {
@@ -684,7 +979,7 @@ body.admin {
   border-radius: 980px;
   font-size: 12px;
   font-weight: 500;
-  background: rgba(0, 113, 227, 0.1);
+  background: rgba(26, 150, 150, 0.1);
   color: var(--color-primary);
 }
 .product-detail-label {
@@ -819,7 +1114,7 @@ body.admin {
 .input:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+  box-shadow: 0 0 0 3px rgba(26, 150, 150, 0.15);
 }
 .input-small {
   padding: 4px 8px;

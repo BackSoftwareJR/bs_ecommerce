@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <title>PPR Skintemple</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="module" crossorigin src="/frontend/dist/assets/main-DwyskABs.js"></script>
-    <link rel="modulepreload" crossorigin href="/frontend/dist/assets/api-AaxENaXw.js">
-    <link rel="stylesheet" crossorigin href="/frontend/dist/assets/api-zMHq1htX.css">
+    <script type="module" crossorigin src="/frontend/dist/assets/main-WaULViHZ.js"></script>
+    <link rel="modulepreload" crossorigin href="/frontend/dist/assets/api-0SuRHtRk.js">
+    <link rel="stylesheet" crossorigin href="/frontend/dist/assets/api-BE2xwlTb.css">
   </head>
   <body class="storefront">
+
+    <!-- ── Header ── -->
     <header class="site-header">
       <div class="header-inner">
         <a href="./" class="logo">
@@ -29,66 +31,92 @@
     </header>
 
     <main class="main">
-      <!-- Hero -->
-      <section class="hero">
-        <div class="container">
-          <p class="hero-eyebrow" id="hero-eyebrow">La tua skin care di fiducia</p>
-          <h1 class="hero-title" id="hero-title">
-            Benvenuto su<br /><span class="accent">PPR Skintemple</span>
-          </h1>
-          <p class="hero-subtitle" id="hero-subtitle">
-            Scopri i nostri prodotti selezionati per la cura della tua pelle.
+
+      <!-- ── 1. HERO: titolo centrato + immagine fullbleed (stile Huawei "Qualità Premium") ── -->
+      <section class="hw-hero">
+        <div class="hw-hero-text">
+          <h1 class="hw-hero-title" id="hero-title">La cura della pelle,<br /><em>ridefinita.</em></h1>
+          <p class="hw-hero-quote" id="hero-subtitle">
+            "La qualità di ogni prodotto è il riflesso della cura che mettiamo nel selezionarlo per te."
           </p>
-          <div class="hero-actions">
-            <a href="./prodotti.html" class="btn-hero-primary">Scopri la vetrina</a>
-            <a href="./supporto.html" class="btn-hero-secondary">Contattaci</a>
-          </div>
+        </div>
+        <div class="hw-hero-image">
+          <!-- Sostituisci con: <img src="/frontend/dist/hero.jpg" alt="PPR Skintemple" /> -->
         </div>
       </section>
 
-      <hr class="section-divider" />
+      <hr class="hw-divider" />
 
-      <!-- Vantaggi (3 colonne stile Huawei) -->
-      <section class="features-section">
+      <!-- ── 2. INTRO + STATS (testo sx, numeri grandi dx) ── -->
+      <section class="hw-intro">
         <div class="container">
-          <div class="features-grid">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <h3 class="feature-title">Prodotti selezionati</h3>
-              <p class="feature-desc">Una selezione curata di prodotti di qualità per la cura della pelle, scelti con attenzione per ogni tipo di esigenza.</p>
+          <div class="hw-intro-grid">
+            <div class="hw-intro-text">
+              <p>PPR Skintemple seleziona con rigore i migliori prodotti per la cura della pelle. Ogni articolo presente nella nostra vetrina è stato valutato per garantire qualità degli ingredienti, efficacia reale e sicurezza per tutti i tipi di pelle. La nostra missione è semplice: portarti il meglio.</p>
             </div>
-            <div class="feature-item">
-              <div class="feature-icon">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div class="hw-intro-stats">
+              <div class="hw-stat">
+                <span class="hw-stat-label">Prodotti selezionati</span>
+                <span class="hw-stat-number">50<sup>+</sup></span>
+                <span class="hw-stat-sub">nella vetrina</span>
               </div>
-              <h3 class="feature-title">Consulenza rapida</h3>
-              <p class="feature-desc">Rispondiamo alle tue richieste di informazioni in tempi brevi. Scrivi direttamente dalla pagina prodotto.</p>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon">
-                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <div class="hw-stat">
+                <span class="hw-stat-label">Qualità garantita</span>
+                <span class="hw-stat-number">100<sup>%</sup></span>
+                <span class="hw-stat-sub">su ogni prodotto</span>
               </div>
-              <h3 class="feature-title">Cura e passione</h3>
-              <p class="feature-desc">Ogni prodotto è trattato con la massima attenzione. La tua soddisfazione è la nostra priorità assoluta.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <hr class="section-divider" />
+      <hr class="hw-divider" />
 
-      <!-- Prodotti in evidenza -->
-      <section class="section products-preview">
+      <!-- ── 3. TITOLO COLORATO (stile "Convenienza a tutto tondo") ── -->
+      <section class="hw-colored-title-section">
         <div class="container">
-          <h2 class="section-title">In evidenza</h2>
+          <h2 class="hw-colored-title">I valori di SkinTemple</h2>
+        </div>
+      </section>
+
+      <!-- ── 4. FEATURES + IMMAGINE (lista sx, foto dx — stile Huawei) ── -->
+      <section class="hw-features">
+        <div class="container">
+          <div class="hw-features-grid">
+            <div class="hw-features-list">
+              <div class="hw-feature">
+                <h3>Selezione rigorosa</h3>
+                <p>Ogni prodotto viene scelto con criteri precisi: ingredienti di qualità, efficacia dimostrata e sicurezza per tutti i tipi di pelle.</p>
+              </div>
+              <div class="hw-feature">
+                <h3>Consulenza personalizzata</h3>
+                <p>Il nostro team è sempre disponibile per rispondere alle tue domande e guidarti nella scelta del prodotto più adatto alle tue esigenze.</p>
+              </div>
+              <div class="hw-feature">
+                <h3>Esperienza e fiducia</h3>
+                <p>I prodotti che offriamo sono testati direttamente da noi. Ti garantiamo risultati reali, affidabili e misurabili nel tempo.</p>
+              </div>
+            </div>
+            <div class="hw-features-image">
+              <!-- Sostituisci con: <img src="/frontend/dist/values.jpg" alt="SkinTemple values" /> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="hw-divider" />
+
+      <!-- ── 5. I NOSTRI PRODOTTI ── -->
+      <section class="hw-products">
+        <div class="container">
+          <h2 class="hw-section-title">I nostri prodotti</h2>
           <div class="product-grid" id="featured-products"></div>
-          <p class="section-cta">
-            <a href="./prodotti.html" class="btn-hero-primary">Vedi tutti i prodotti</a>
+          <p class="hw-products-cta">
+            <a href="./prodotti.html" class="btn-hw-primary">Scopri tutta la vetrina</a>
           </p>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
@@ -98,5 +126,6 @@
         </p>
       </div>
     </footer>
+
   </body>
 </html>
