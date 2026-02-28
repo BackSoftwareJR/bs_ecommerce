@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <title>Prodotti — PPR Skintemple</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="module" crossorigin src="/frontend/dist/assets/prodotti-Dd44NixO.js"></script>
-    <link rel="modulepreload" crossorigin href="/frontend/dist/assets/api-8lRkZ2Op.js">
-    <link rel="modulepreload" crossorigin href="/frontend/dist/assets/dom-NB7M50He.js">
-    <link rel="stylesheet" crossorigin href="/frontend/dist/assets/api-DUTiVNCn.css">
+    <script type="module" crossorigin src="/frontend/dist/assets/prodotti-Bv2QThhf.js"></script>
+    <link rel="modulepreload" crossorigin href="/frontend/dist/assets/api-JfdcZMFN.js">
+    <link rel="stylesheet" crossorigin href="/frontend/dist/assets/api-8ObZIrfb.css">
   </head>
   <body class="storefront">
     <header class="site-header">
@@ -28,17 +27,42 @@
         </div>
       </div>
     </header>
+
     <main class="main">
-      <section class="section">
+      <section class="catalog-section">
         <div class="container">
-          <h1 class="page-title">Prodotti</h1>
-          <div class="product-grid" id="products-grid"></div>
-          <p class="empty-state" id="products-empty" style="display:none;">
-            Nessun prodotto disponibile al momento.
-          </p>
+          <div class="catalog-layout">
+
+            <!-- ── Sidebar categorie ── -->
+            <aside class="catalog-sidebar">
+              <div id="category-nav">
+                <!-- Caricato da prodotti.js -->
+                <div class="catalog-skeleton">
+                  <div class="skel-line skel-w80"></div>
+                  <div class="skel-line skel-w60"></div>
+                  <div class="skel-line skel-w70"></div>
+                  <div class="skel-line skel-w50"></div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- ── Contenuto prodotti ── -->
+            <div class="catalog-content">
+              <div class="catalog-toolbar">
+                <h1 class="catalog-heading" id="catalog-title">Tutti i prodotti</h1>
+                <span class="catalog-count" id="catalog-count"></span>
+              </div>
+              <div class="hw-catalog-grid" id="products-grid"></div>
+              <p class="catalog-empty" id="products-empty" style="display:none;">
+                Nessun prodotto disponibile al momento.
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
     </main>
+
     <footer class="st-footer">
       <div class="st-footer-main">
         <div class="container">
@@ -99,6 +123,6 @@
         </div>
       </div>
     </footer>
+
   </body>
 </html>
-

@@ -1,4 +1,4 @@
-import{d as l,f as m}from"./api-8lRkZ2Op.js";import{e as u}from"./admin-auth-DX8VMzMQ.js";function r(e){if(e==null)return"";const n=document.createElement("div");return n.textContent=e,n.innerHTML}async function h(){await u();const e=document.getElementById("products-table-wrap"),n=document.getElementById("logout-btn");if(n&&n.addEventListener("click",async a=>{a.preventDefault();try{await l()}catch{}window.location.href="admin-login.html"}),!!e)try{const a=await m({per_page:100}),o=Array.isArray(a.data)?a.data:[];if(!o.length){e.innerHTML='<p class="empty-state">Nessun prodotto. <a href="./admin-prodotto.html">Aggiungi il primo</a>.</p>';return}e.innerHTML=`
+import{e as l,h as m}from"./api-JfdcZMFN.js";import{e as h}from"./admin-auth-0_EEe6l0.js";function r(e){if(e==null)return"";const n=document.createElement("div");return n.textContent=e,n.innerHTML}async function u(){await h();const e=document.getElementById("products-table-wrap"),n=document.getElementById("logout-btn");if(n&&n.addEventListener("click",async a=>{a.preventDefault();try{await l()}catch{}window.location.href="admin-login.html"}),!!e)try{const a=await m({per_page:100}),o=Array.isArray(a.data)?a.data:[];if(!o.length){e.innerHTML='<p class="empty-state">Nessun prodotto. <a href="./admin-prodotto.html">Aggiungi il primo</a>.</p>';return}e.innerHTML=`
       <div class="admin-table-wrap">
         <table class="admin-table">
           <thead>
@@ -29,4 +29,4 @@ import{d as l,f as m}from"./api-8lRkZ2Op.js";import{e as u}from"./admin-auth-DX8
           </tbody>
         </table>
       </div>
-    `}catch(a){console.error(a),e.innerHTML='<p class="empty-state">Errore nel caricamento.</p>'}}h();
+    `}catch(a){console.error(a),e.innerHTML='<p class="empty-state">Errore nel caricamento.</p>'}}u();

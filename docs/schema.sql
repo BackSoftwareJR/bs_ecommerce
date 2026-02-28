@@ -144,21 +144,43 @@ CREATE TABLE `categories` (
 CREATE TABLE `products` (
   `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `category_id` BIGINT UNSIGNED DEFAULT NULL,
-  `name` VARCHAR(255) NOT NULL,
+
+  -- Info base
+  `name` VARCHAR(255) NOT NULL,           -- Nome Prodotto (titolo hero)
+  `model_name` VARCHAR(255) DEFAULT NULL, -- Nome Modello (opzionale — appare sull'header e hero)
   `slug` VARCHAR(255) NOT NULL,
   `short_description` VARCHAR(500) DEFAULT NULL,
-  `description` LONGTEXT DEFAULT NULL,
+  `label` VARCHAR(100) DEFAULT NULL,
+
+  -- Sezione 1
+  `section1_title` VARCHAR(255) DEFAULT NULL,
+  `section1_description` LONGTEXT DEFAULT NULL,   -- HTML (Quill)
+  `section1_visible` TINYINT(1) NOT NULL DEFAULT 1,
+
+  -- Sezione 2
+  `section2_title` VARCHAR(255) DEFAULT NULL,
+  `section2_description` LONGTEXT DEFAULT NULL,   -- HTML (Quill, supporta liste)
+  `section2_visible` TINYINT(1) NOT NULL DEFAULT 1,
+
+  -- Scheda tecnica
+  `techspec_document_label` VARCHAR(255) DEFAULT NULL,  -- Etichetta bottone download
+  `techspec_visible` TINYINT(1) NOT NULL DEFAULT 1,
+
+  -- Video
+  `video_url` VARCHAR(500) DEFAULT NULL,
+  `video_visible` TINYINT(1) NOT NULL DEFAULT 0,
+
+  -- FAQ
+  `faq_visible` TINYINT(1) NOT NULL DEFAULT 0,
+
+  -- Campi legacy / generali
   `price` DECIMAL(10, 2) NOT NULL DEFAULT 0.00,
-  `compare_at_price` DECIMAL(10, 2) DEFAULT NULL,
   `is_active` TINYINT(1) NOT NULL DEFAULT 1,
   `is_featured` TINYINT(1) NOT NULL DEFAULT 0,
   `sort_order` INT UNSIGNED NOT NULL DEFAULT 0,
-  `meta_title` VARCHAR(255) DEFAULT NULL,
-  `meta_description` VARCHAR(500) DEFAULT NULL,
-  `video_url` VARCHAR(500) DEFAULT NULL,
-  `label` VARCHAR(100) DEFAULT NULL,
   `created_at` TIMESTAMP NULL DEFAULT NULL,
   `updated_at` TIMESTAMP NULL DEFAULT NULL,
+
   PRIMARY KEY (`id`),
   UNIQUE KEY `products_slug_unique` (`slug`),
   KEY `products_category_id_foreign` (`category_id`),
@@ -258,10 +280,31 @@ CREATE TABLE `media` (
   `alt` VARCHAR(255) DEFAULT NULL,
   `caption` VARCHAR(500) DEFAULT NULL,
   `sort_order` INT UNSIGNED NOT NULL DEFAULT 0,
+  -- Collection: identifica la "zona" del prodotto a cui appartiene il file
+  -- Valori: 'hero' (carousel hero, max 3), 'section1', 'section2',
+  --         'techspec', 'document' (download — alt = etichetta bottone)
+  `collection` VARCHAR(100) NOT NULL DEFAULT 'hero',
   `created_at` TIMESTAMP NULL DEFAULT NULL,
   `updated_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `media_mediaable_type_mediaable_id_index` (`mediaable_type`, `mediaable_id`)
+  KEY `media_mediaable_type_mediaable_id_index` (`mediaable_type`, `mediaable_id`),
+  KEY `media_collection_index` (`collection`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ---------------------------------------------------------------------------
+-- Product FAQs (domande e risposte per sezione FAQ prodotto)
+-- ---------------------------------------------------------------------------
+CREATE TABLE `product_faqs` (
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `product_id` BIGINT UNSIGNED NOT NULL,
+  `question` VARCHAR(500) NOT NULL,
+  `answer` TEXT NOT NULL,
+  `sort_order` INT UNSIGNED NOT NULL DEFAULT 0,
+  `created_at` TIMESTAMP NULL DEFAULT NULL,
+  `updated_at` TIMESTAMP NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `product_faqs_product_id_foreign` (`product_id`),
+  CONSTRAINT `product_faqs_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ---------------------------------------------------------------------------

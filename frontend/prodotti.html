@@ -25,17 +25,42 @@
         </div>
       </div>
     </header>
+
     <main class="main">
-      <section class="section">
+      <section class="catalog-section">
         <div class="container">
-          <h1 class="page-title">Prodotti</h1>
-          <div class="product-grid" id="products-grid"></div>
-          <p class="empty-state" id="products-empty" style="display:none;">
-            Nessun prodotto disponibile al momento.
-          </p>
+          <div class="catalog-layout">
+
+            <!-- ── Sidebar categorie ── -->
+            <aside class="catalog-sidebar">
+              <div id="category-nav">
+                <!-- Caricato da prodotti.js -->
+                <div class="catalog-skeleton">
+                  <div class="skel-line skel-w80"></div>
+                  <div class="skel-line skel-w60"></div>
+                  <div class="skel-line skel-w70"></div>
+                  <div class="skel-line skel-w50"></div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- ── Contenuto prodotti ── -->
+            <div class="catalog-content">
+              <div class="catalog-toolbar">
+                <h1 class="catalog-heading" id="catalog-title">Tutti i prodotti</h1>
+                <span class="catalog-count" id="catalog-count"></span>
+              </div>
+              <div class="hw-catalog-grid" id="products-grid"></div>
+              <p class="catalog-empty" id="products-empty" style="display:none;">
+                Nessun prodotto disponibile al momento.
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
     </main>
+
     <footer class="st-footer">
       <div class="st-footer-main">
         <div class="container">
@@ -96,7 +121,7 @@
         </div>
       </div>
     </footer>
+
     <script type="module" src="/src/prodotti.js"></script>
   </body>
 </html>
-
