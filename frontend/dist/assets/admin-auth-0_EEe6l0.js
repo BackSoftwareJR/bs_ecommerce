@@ -1,1 +1,0 @@
-import{A as o}from"./api-JfdcZMFN.js";const t="admin-login.html";async function i(){try{const n=await o();if(n&&["admin","editor"].includes(n.role))return n}catch{}return window.location.href=t+(window.location.search?"?next="+encodeURIComponent(window.location.pathname+window.location.search):""),null}export{i as e};

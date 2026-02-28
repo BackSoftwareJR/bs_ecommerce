@@ -1,4 +1,4 @@
-import{b as p,a as u}from"./api-JfdcZMFN.js";function y(){const e=document.getElementById("year");e&&(e.textContent=String(new Date().getFullYear()))}function s(e){if(e==null)return"";const a=document.createElement("div");return a.textContent=e,a.innerHTML}let g=[],i=null;function l(){const e=document.getElementById("category-nav");if(!e)return;let a=`<div class="catalog-cat-group">
+import{b as p,a as u}from"./api-CsNKvVOi.js";function y(){const e=document.getElementById("year");e&&(e.textContent=String(new Date().getFullYear()))}function s(e){if(e==null)return"";const a=document.createElement("div");return a.textContent=e,a.innerHTML}let g=[],i=null;function l(){const e=document.getElementById("category-nav");if(!e)return;let a=`<div class="catalog-cat-group">
     <div class="catalog-cat-head ${i?"":"active"}" data-action="all">
       Tutti i prodotti
     </div>
