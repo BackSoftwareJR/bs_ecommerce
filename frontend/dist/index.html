@@ -4,41 +4,88 @@
     <meta charset="UTF-8" />
     <title>PPR Skintemple</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="module" crossorigin src="/frontend/dist/assets/main-BrNNUJt3.js"></script>
-    <link rel="modulepreload" crossorigin href="/frontend/dist/assets/api-BXrcMaAh.js">
-    <link rel="stylesheet" crossorigin href="/frontend/dist/assets/api-Dnvb9gYq.css">
+    <script type="module" crossorigin src="/frontend/dist/assets/main-iVpgYOuj.js"></script>
+    <link rel="modulepreload" crossorigin href="/frontend/dist/assets/api-CLZultR4.js">
+    <link rel="stylesheet" crossorigin href="/frontend/dist/assets/api-Bax6hxpf.css">
   </head>
   <body class="storefront">
     <header class="site-header">
-      <div class="container header-inner">
-        <a href="./" class="logo">PPR Skintemple</a>
+      <div class="header-inner">
+        <a href="./" class="logo">
+          <img src="/frontend/dist/logo_skinTemple.png" alt="PPR Skintemple" />
+        </a>
         <nav class="nav">
-          <a href="./">Home</a>
-          <a href="./prodotti.html">Prodotti</a>
+          <a href="./" class="active">Home</a>
+          <a href="./prodotti.html">Vetrina</a>
+          <a href="./supporto.html">Supporto</a>
         </nav>
+        <a href="./supporto.html" class="btn-contact">Contattaci</a>
       </div>
     </header>
+
     <main class="main">
+      <!-- Hero -->
       <section class="hero">
         <div class="container">
-          <h1 class="hero-title" id="hero-title">Benvenuto</h1>
+          <p class="hero-eyebrow" id="hero-eyebrow">La tua skin care di fiducia</p>
+          <h1 class="hero-title" id="hero-title">
+            Benvenuto su<br /><span class="accent">PPR Skintemple</span>
+          </h1>
           <p class="hero-subtitle" id="hero-subtitle">
-            Scopri i nostri prodotti.
+            Scopri i nostri prodotti selezionati per la cura della tua pelle.
           </p>
+          <div class="hero-actions">
+            <a href="./prodotti.html" class="btn-hero-primary">Scopri la vetrina</a>
+            <a href="./supporto.html" class="btn-hero-secondary">Contattaci</a>
+          </div>
         </div>
       </section>
+
+      <hr class="section-divider" />
+
+      <!-- Vantaggi (3 colonne stile Huawei) -->
+      <section class="features-section">
+        <div class="container">
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="feature-title">Prodotti selezionati</h3>
+              <p class="feature-desc">Una selezione curata di prodotti di qualità per la cura della pelle, scelti con attenzione per ogni tipo di esigenza.</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h3 class="feature-title">Consulenza rapida</h3>
+              <p class="feature-desc">Rispondiamo alle tue richieste di informazioni in tempi brevi. Scrivi direttamente dalla pagina prodotto.</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <h3 class="feature-title">Cura e passione</h3>
+              <p class="feature-desc">Ogni prodotto è trattato con la massima attenzione. La tua soddisfazione è la nostra priorità assoluta.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- Prodotti in evidenza -->
       <section class="section products-preview">
         <div class="container">
           <h2 class="section-title">In evidenza</h2>
           <div class="product-grid" id="featured-products"></div>
           <p class="section-cta">
-            <a href="./prodotti.html" class="btn btn-primary">
-              Vedi tutti i prodotti
-            </a>
+            <a href="./prodotti.html" class="btn-hero-primary">Vedi tutti i prodotti</a>
           </p>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="container">
         <p class="footer-text" id="footer-text">
@@ -48,4 +95,3 @@
     </footer>
   </body>
 </html>
-
